@@ -22,7 +22,7 @@ public class LabProgram {
          
          }
          
-         userNum = userNum / divNum;
-         System.out.println (userNum);
+       userNum = userNum / divNum;
+       System.out.println (userNum);
    }
 }
