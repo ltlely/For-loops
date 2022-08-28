@@ -1,0 +1,36 @@
+/* Create a program that finds the product of two positive numbers without using the 
+multiplication operator (*). The program should ask the user for the first positive number. 
+The program should then ask the user for the second positive number. The program should then 
+calculate the product of these two numbers without using the multiplication operator. The 
+program should end by displaying the product of these two numbers. The program does not need 
+to check if the user enters a negative number.  
+1. Ask user the first positive number
+2. Save 
+3. Ask for second positive number
+4. Save
+5. Calculate two numbers without using multiplication 
+6. Print out the product of the two numbers
+7. Does not need to check if it's a negative number
+*/
+
+import java.util.Scanner; 
+    public class Main {
+        public static void main (String []args) {
+            
+            
+            int product = 0;
+            
+            Scanner keyboard = new Scanner(System.in);
+            
+            System.out.println ("Please enter your first positive number");
+            int keyboard1 = keyboard.nextInt();
+            
+            System.out.println ("Please enter your second positive number");
+            int keyboard2 = keyboard.nextInt();
+            
+            for (int i = 1; i <= keyboard2; i++) {
+            product = product + keyboard1;
+          }
+        System.out.println ("The product is: " + product);
+        }
+    }
