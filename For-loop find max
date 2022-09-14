@@ -1,0 +1,50 @@
+/* Create a program that allows a user to enter the name of each student in a class and their final percentage. The class only has 4 
+ * students in it. The program should figure out which student had the highest percentage in the class. The program should
+ * print the name and the percentage of the student who had the highest average. The program should also print the class average. 
+ *
+ * 1. Ask user to enter the name
+ * 2. 	Save input
+ * 3. Ask user to enter final percentage
+ * 4. 	Save input
+ * 5. Create loop up to 4 students 
+ * 6. Find the highest percentage 
+ * 7. Print the name and percent of the highest average
+ * 8. Print the class average 
+ *
+ *
+ */
+import java.util.Scanner;
+public class FindHighScore {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		
+		String highestName = "";
+		double highestScore = -1;
+		double average;
+		double sum = 0.0;
+		
+		
+		for (int i = 1; i <= 4; i++) {
+		
+			System.out.println ("Enter name");
+			String name = keyboard.nextLine();
+			System.out.println ("Enter score of the student");
+			double finalPercentage = keyboard.nextDouble();
+			keyboard.nextLine(); 
+			
+			
+			if (finalPercentage > highestScore) {
+				highestScore = finalPercentage;
+				highestName = name;
+			}
+				
+		sum += finalPercentage;
+			
+		}	
+		System.out.println ("Student with highest score " + highestName);
+		System.out.println ("Highest score: " + highestScore);
+		average = sum/(double)4;
+		System.out.println ("Class average: " + average);
+	}
+
+}
